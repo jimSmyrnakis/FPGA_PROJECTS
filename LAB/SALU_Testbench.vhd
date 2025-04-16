@@ -1,0 +1,109 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity SALU_Testbench is
+generic ( n : integer := 8 );
+end SALU_Testbench;
+
+architecture Test of SALU_Testbench is 
+component synchronus_alu is 
+generic ( n : integer := 8 );
+port ( 
+	data1 : in  std_logic_vector(n-1 downto 0);
+	data2 : in  std_logic_vector(n-1 downto 0);
+	result: out std_logic_vector(n-1 downto 0);
+	opcode: in  std_logic_vector(2   downto 0);
+	sign  : out std_logic;
+	ovrf  : out std_logic;
+	zero  : out std_logic;
+	cout  : out std_logic;
+	clk   : in  std_logic);
+end component;
+
+--signal 
+	signal internal_data1 , internal_data2 , internal_result : std_logic_vector(n-1 downto 0);
+	signal internal_sign , internal_cout , internal_zero , internal_overflow , internal_clk : std_logic;
+	signal internal_opcode : std_logic_vector(2 downto 0);
+
+begin 
+
+	
+	process 
+	begin
+		-- sum
+		internal_data1 <= (others => '1');
+		internal_data2 <= (others => '0');
+		internal_opcode <= "000";
+		internal_clk <= '0';
+		internal_clk <= '1';
+		wait for 100 ps;
+		-- sub
+		internal_data1 <= (others => '1');
+		internal_data2 <= (others => '1');
+		internal_opcode <= "001";
+		internal_clk <= '0';
+		internal_clk <= '1';
+		wait for 100 ps;
+		-- and
+		internal_data1 <= (others => '1');
+		internal_data2 <= (others => '1');
+		internal_data2(0) <= '0';
+		internal_opcode <= "010";
+		internal_clk <= '0';
+		internal_clk <= '1';
+		wait for 100 ps;
+		-- or
+		internal_data1 <= (others => '1');
+		internal_data2 <= (others => '0');
+		internal_opcode <= "011";
+		internal_clk <= '0';
+		internal_clk <= '1';
+		wait for 100 ps;
+		-- xor
+		internal_data1 <= (others => '1');
+		internal_data2 <= (others => '0');
+		internal_opcode <= "100";
+		internal_clk <= '0';
+		internal_clk <= '1';
+		wait for 100 ps;
+		-- nand
+		internal_data1 <= (others => '1');
+		internal_data2 <= (others => '0');
+		internal_opcode <= "101";
+		internal_clk <= '0';
+		internal_clk <= '1';
+		wait for 100 ps;
+		-- nor
+		internal_data1 <= (others => '1');
+		internal_data2 <= (others => '0');
+		internal_opcode <= "110";
+		internal_clk <= '0';
+		internal_clk <= '1';
+		wait for 100 ps;
+		-- xnor
+		internal_data1 <= (others => '1');
+		internal_data2 <= (others => '0');
+		internal_opcode <= "111";
+		internal_clk <= '0';
+		internal_clk <= '1';
+		wait for 100 ps;
+		-- not
+		internal_data1 <= (others => '1');
+		internal_data2 <= (others => '1');
+		internal_data2(0) <= '0';
+		internal_opcode <= "100";
+		internal_clk <= '0';
+		internal_clk <= '1';
+		wait for 100 ps;
+
+	end process;
+
+	ALU1 : synchronus_alu generic map ( n => n) port map (
+		data1 => internal_data1 , data2 => internal_data2 , result => internal_result ,
+		sign => internal_sign , opcode => internal_opcode , cout => internal_cout ,
+		zero => internal_zero , ovrf => internal_overflow , clk => internal_clk);
+
+
+
+
+end Test;
