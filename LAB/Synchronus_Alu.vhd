@@ -78,10 +78,10 @@ begin
 		clk => clk , rw => '1' , rst => '0' , 
 		data_in => flags_internal , 
 		data_out => flags_out );
-	sign <= flags_out(0);
-	ovrf <= flags_out(1);
-	zero <= flags_out(2);
-	cout <= flags_out(3);
+	sign <= flags_out(3);
+	ovrf <= flags_out(2);
+	zero <= flags_out(1);
+	cout <= flags_out(0);
 	
 
 
