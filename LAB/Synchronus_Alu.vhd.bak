@@ -64,13 +64,6 @@ begin
 		clk => clk , rw => '1' , rst => '0' , data_in => data2 , data_out => data2_internal );
 	REG1_opcode: DRegister generic map ( n => 3) port map (
 		clk => clk , rw => '1' , rst => '0' , data_in => opcode , data_out => opcode_internal);
-
-	MAIN_ALU   : ALU generic map (n => n) port map(
-		ALU_data1 => data1_internal , ALU_data2 => data2_internal , ALU_result => result_internal ,
-		ALU_opcode => opcode_internal ,
-		ALU_sign => sign_internal , ALU_overflow => ovrf_internal , ALU_zero => zero_internal ,
-		ALU_cout => cout_internal );
-
 	REG2_Result: DRegister generic map ( n => n ) port map (
 		clk => clk , rw => '1' , rst => '0' , data_in => result_internal , data_out => result);
 	flags_internal <= sign_internal & ovrf_internal & zero_internal & cout_internal;
@@ -82,7 +75,11 @@ begin
 	ovrf <= flags_out(1);
 	zero <= flags_out(2);
 	cout <= flags_out(3);
-	
+	MAIN_ALU   : ALU generic map (n => n) port map(
+		ALU_data1 => data1_internal , ALU_data2 => data2_internal , ALU_result => result_internal ,
+		ALU_opcode => opcode_internal ,
+		ALU_sign => sign_internal , ALU_overflow => ovrf_internal , ALU_zero => zero_internal ,
+		ALU_cout => cout_internal );
 
 
 

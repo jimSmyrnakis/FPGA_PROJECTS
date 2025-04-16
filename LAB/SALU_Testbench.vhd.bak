@@ -101,9 +101,8 @@ begin
 		internal_data2(0) <= '0';
 		internal_opcode <= "100";
 		internal_clk <= '0';
-		wait for 50 ps;
 		internal_clk <= '1';
-		wait for 50 ps;
+		wait for 100 ps;
 
 	end process;
 
