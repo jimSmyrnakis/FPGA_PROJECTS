@@ -13,7 +13,7 @@ Ealu
 Z0 w1744055163
 Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 42
+!i122 60
 Z3 d/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB
 Z4 8/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Alu.vhd
 Z5 F/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Alu.vhd
@@ -23,9 +23,9 @@ VF6lX9`R>:HY22BEQCTDTW0
 !s100 LnU037Kl3:CK6XN[9bOC>0
 Z6 OV;C;2020.1;71
 32
-Z7 !s110 1744802156
+Z7 !s110 1744803267
 !i10b 1
-Z8 !s108 1744802155.000000
+Z8 !s108 1744803267.000000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Alu.vhd|
 Z10 !s107 /home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Alu.vhd|
 !i113 1
@@ -35,7 +35,7 @@ Abehavional
 R1
 R2
 DEx4 work 3 alu 0 22 F6lX9`R>:HY22BEQCTDTW0
-!i122 42
+!i122 60
 l47
 L25 41
 VX?Gi09n=N@<79CZZ83FH;3
@@ -54,7 +54,7 @@ Ealu_testbench
 Z13 w1744056209
 R1
 R2
-!i122 43
+!i122 61
 R3
 Z14 8/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Alu_Testbench.vhd
 Z15 F/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Alu_Testbench.vhd
@@ -66,9 +66,9 @@ R6
 32
 R7
 !i10b 1
-Z16 !s108 1744802156.000000
-Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Alu_Testbench.vhd|
-Z18 !s107 /home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Alu_Testbench.vhd|
+R8
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Alu_Testbench.vhd|
+Z17 !s107 /home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Alu_Testbench.vhd|
 !i113 1
 R11
 R12
@@ -76,7 +76,7 @@ Abehavonal
 R1
 R2
 DEx4 work 13 alu_testbench 0 22 P?;?Jbj:VI<6Q:FNjfWGY1
-!i122 43
+!i122 61
 l37
 L8 90
 Vj@hD=Ccgz3`CI=?^G;ATQ2
@@ -85,20 +85,20 @@ R6
 32
 R7
 !i10b 1
+R8
 R16
 R17
-R18
 !i113 1
 R11
 R12
 Edregister
-Z19 w1744051620
+Z18 w1744051620
 R1
 R2
-!i122 44
+!i122 62
 R3
-Z20 8/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/DRegister.vhd
-Z21 F/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/DRegister.vhd
+Z19 8/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/DRegister.vhd
+Z20 F/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/DRegister.vhd
 l0
 L5 1
 Vka9;j;NF;Wz3aX:<INQk20
@@ -107,9 +107,9 @@ R6
 32
 R7
 !i10b 1
-R16
-Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/DRegister.vhd|
-Z23 !s107 /home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/DRegister.vhd|
+R8
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/DRegister.vhd|
+Z22 !s107 /home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/DRegister.vhd|
 !i113 1
 R11
 R12
@@ -117,7 +117,7 @@ Abehavional
 R1
 R2
 DEx4 work 9 dregister 0 22 ka9;j;NF;Wz3aX:<INQk20
-!i122 44
+!i122 62
 l19
 L16 20
 V`;Ezll3eQ2TmU[WT;]c;R0
@@ -126,61 +126,61 @@ R6
 32
 R7
 !i10b 1
-R16
+R8
+R21
 R22
-R23
 !i113 1
 R11
 R12
 Edregister_testbench
-Z24 w1744800825
+Z23 w1744800825
 R1
 R2
-!i122 50
+!i122 68
 R3
-Z25 8/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/DRegister_Testbench.vhd
-Z26 F/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/DRegister_Testbench.vhd
+Z24 8/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/DRegister_Testbench.vhd
+Z25 F/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/DRegister_Testbench.vhd
 l0
 L5 1
 V3BzmTZ16aS<W?7^:iB@YJ0
 !s100 2kFAZIL;W6]Ei66cRe3cJ1
 R6
 32
-Z27 !s110 1744802157
+Z26 !s110 1744803268
 !i10b 1
-Z28 !s108 1744802157.000000
-Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/DRegister_Testbench.vhd|
-Z30 !s107 /home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/DRegister_Testbench.vhd|
+Z27 !s108 1744803268.000000
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/DRegister_Testbench.vhd|
+Z29 !s107 /home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/DRegister_Testbench.vhd|
 !i113 1
 R11
 R12
 Atestbench
 R1
 R2
-Z31 DEx4 work 19 dregister_testbench 0 22 3BzmTZ16aS<W?7^:iB@YJ0
-!i122 50
+Z30 DEx4 work 19 dregister_testbench 0 22 3BzmTZ16aS<W?7^:iB@YJ0
+!i122 68
 l23
-Z32 L8 52
-Z33 Ve2aY?I=e^KR0E_fH^3P141
-Z34 !s100 6iX<7a7jBQZeQIJ2oYDmA1
+Z31 L8 52
+Z32 Ve2aY?I=e^KR0E_fH^3P141
+Z33 !s100 6iX<7a7jBQZeQIJ2oYDmA1
 R6
 32
-R27
+R26
 !i10b 1
+R27
 R28
 R29
-R30
 !i113 1
 R11
 R12
 Einteger_unit
-Z35 w1743964684
+Z34 w1743964684
 R1
 R2
-!i122 45
+!i122 63
 R3
-Z36 8/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/INTEGER_UNIT.vhd
-Z37 F/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/INTEGER_UNIT.vhd
+Z35 8/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/INTEGER_UNIT.vhd
+Z36 F/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/INTEGER_UNIT.vhd
 l0
 L4 1
 V>0^CC]B0cZJA@Ej1B=[mM2
@@ -189,9 +189,9 @@ R6
 32
 R7
 !i10b 1
-R16
-Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/INTEGER_UNIT.vhd|
-Z39 !s107 /home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/INTEGER_UNIT.vhd|
+R8
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/INTEGER_UNIT.vhd|
+Z38 !s107 /home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/INTEGER_UNIT.vhd|
 !i113 1
 R11
 R12
@@ -199,7 +199,7 @@ Abehavonal
 R1
 R2
 DEx4 work 12 integer_unit 0 22 >0^CC]B0cZJA@Ej1B=[mM2
-!i122 45
+!i122 63
 l31
 L20 33
 VS;N4KSCI:zHin`@55emVG3
@@ -208,22 +208,22 @@ R6
 32
 R7
 !i10b 1
-R16
+R8
+R37
 R38
-R39
 !i113 1
 R11
 R12
 Einteger_unit_testbench
-Z40 w1744798695
-Z41 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z42 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z39 w1744798695
+Z40 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z41 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 R1
 R2
-!i122 46
+!i122 64
 R3
-Z43 8/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/INTEGER_UNIT_TESTBENCH.vhd
-Z44 F/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/INTEGER_UNIT_TESTBENCH.vhd
+Z42 8/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/INTEGER_UNIT_TESTBENCH.vhd
+Z43 F/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/INTEGER_UNIT_TESTBENCH.vhd
 l0
 L8 1
 VmRiikn1JWJEeFj5P649nK3
@@ -232,19 +232,19 @@ R6
 32
 R7
 !i10b 1
-R16
-Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/INTEGER_UNIT_TESTBENCH.vhd|
-Z46 !s107 /home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/INTEGER_UNIT_TESTBENCH.vhd|
+R8
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/INTEGER_UNIT_TESTBENCH.vhd|
+Z45 !s107 /home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/INTEGER_UNIT_TESTBENCH.vhd|
 !i113 1
 R11
 R12
 Abehavoral
+R40
 R41
-R42
 R1
 R2
 DEx4 work 22 integer_unit_testbench 0 22 mRiikn1JWJEeFj5P649nK3
-!i122 46
+!i122 64
 l41
 L13 62
 VLllQlhoONA1ehQANMk_aF2
@@ -253,31 +253,31 @@ R6
 32
 R7
 !i10b 1
-R16
+R8
+R44
 R45
-R46
 !i113 1
 R11
 R12
 Esalu_testbench
-Z47 w1744801616
+Z46 w1744802796
 R1
 R2
-!i122 47
+!i122 65
 R3
-Z48 8/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/SALU_Testbench.vhd
-Z49 F/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/SALU_Testbench.vhd
+Z47 8/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/SALU_Testbench.vhd
+Z48 F/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/SALU_Testbench.vhd
 l0
 L4 1
 V>Hkk^=kKj]80iHSRhi:`=0
 !s100 O;kCC05Hk8S?ML8LI[cKT0
 R6
 32
-R7
+R26
 !i10b 1
-R16
-Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/SALU_Testbench.vhd|
-Z51 !s107 /home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/SALU_Testbench.vhd|
+R8
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/SALU_Testbench.vhd|
+Z50 !s107 /home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/SALU_Testbench.vhd|
 !i113 1
 R11
 R12
@@ -285,40 +285,40 @@ Atest
 R1
 R2
 DEx4 work 14 salu_testbench 0 22 >Hkk^=kKj]80iHSRhi:`=0
-!i122 47
+!i122 65
 l28
-L8 111
-V822<D6:2ZC:LzVR6HMWTd3
-!s100 c2j:P7YH:F=fMECWT@;1l3
+L8 147
+V9A2US_X4oDHXTieRFm[BV3
+!s100 AO39HD[0OFkXzX[URbKER2
 R6
 32
-R7
+R26
 !i10b 1
-R16
+R8
+R49
 R50
-R51
 !i113 1
 R11
 R12
 Esynchronus_alu
-Z52 w1744802152
+Z51 w1744802152
 R1
 R2
-!i122 48
+!i122 66
 R3
-Z53 8/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Synchronus_Alu.vhd
-Z54 F/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Synchronus_Alu.vhd
+Z52 8/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Synchronus_Alu.vhd
+Z53 F/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Synchronus_Alu.vhd
 l0
 L4 1
 Va;C`TSNzd>]mb_>eVg[nO2
 !s100 _mQX]]LoFP54@3HRO?1W30
 R6
 32
-R7
+R26
 !i10b 1
-R16
-Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Synchronus_Alu.vhd|
-Z56 !s107 /home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Synchronus_Alu.vhd|
+R27
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Synchronus_Alu.vhd|
+Z55 !s107 /home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Synchronus_Alu.vhd|
 !i113 1
 R11
 R12
@@ -326,40 +326,40 @@ Abehavional
 R1
 R2
 DEx4 work 14 synchronus_alu 0 22 a;C`TSNzd>]mb_>eVg[nO2
-!i122 48
+!i122 66
 l59
 L18 72
 VM^FFUa`43ZY12I[0R<11K1
 !s100 R8UXA710Y=oLFMJGdInZP0
 R6
 32
-R7
+R26
 !i10b 1
-R16
+R27
+R54
 R55
-R56
 !i113 1
 R11
 R12
 Etest
-Z57 w1743789637
+Z56 w1743789637
 R1
 R2
-!i122 49
+!i122 67
 R3
-Z58 8/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Test.vhd
-Z59 F/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Test.vhd
+Z57 8/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Test.vhd
+Z58 F/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Test.vhd
 l0
 L4 1
 Vib[U>=GD=mQ]nAV3<[=S@0
 !s100 eHgDe[VgEMQF2QE_KG]oc3
 R6
 32
-R27
+R26
 !i10b 1
-R16
-Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Test.vhd|
-Z61 !s107 /home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Test.vhd|
+R27
+Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Test.vhd|
+Z60 !s107 /home/dimitrissmyrnakis/Desktop/Projects/FPGA_PROJECTS/LAB/Test.vhd|
 !i113 1
 R11
 R12
@@ -367,18 +367,18 @@ Adataflow
 R1
 R2
 DEx4 work 4 test 0 22 ib[U>=GD=mQ]nAV3<[=S@0
-!i122 49
+!i122 67
 l10
 L9 4
 V72a1Pn>^^[DA0?M<I:D3h2
 !s100 l]m1Si8Jek[0JHIlT66HD2
 R6
 32
-R27
+R26
 !i10b 1
-R16
+R27
+R59
 R60
-R61
 !i113 1
 R11
 R12
