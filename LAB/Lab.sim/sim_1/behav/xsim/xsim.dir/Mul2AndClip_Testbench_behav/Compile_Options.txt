@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "Mul2AndClip_Testbench_behav" "xil_defaultlib.Mul2AndClip_Testbench" -log "elaborate.log" 

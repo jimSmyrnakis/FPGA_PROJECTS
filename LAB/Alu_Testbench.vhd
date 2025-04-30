@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity Alu_Testbench is
-generic ( n: integer := 32 );
+generic ( n: integer := 8 );
 end Alu_Testbench;
 
 architecture Behavonal of Alu_Testbench is
@@ -42,49 +42,49 @@ begin
 		internal_data1 <= (others => '1');
 		internal_data2 <= (others => '0');
 		internal_opcode <= "000";
-		wait for 100 ps;
+		wait for 2 ps;
 		-- sub
 		internal_data1 <= (others => '1');
 		internal_data2 <= (others => '1');
 		internal_opcode <= "001";
-		wait for 100 ps;
+		wait for 2 ps;
 		-- and
 		internal_data1 <= (others => '1');
 		internal_data2 <= (others => '1');
 		internal_data2(0) <= '0';
 		internal_opcode <= "010";
-		wait for 100 ps;
+		wait for 2 ps;
 		-- or
 		internal_data1 <= (others => '1');
 		internal_data2 <= (others => '0');
 		internal_opcode <= "011";
-		wait for 100 ps;
+		wait for 2 ps;
 		-- xor
 		internal_data1 <= (others => '1');
 		internal_data2 <= (others => '0');
 		internal_opcode <= "100";
-		wait for 100 ps;
+		wait for 2 ps;
 		-- nand
 		internal_data1 <= (others => '1');
 		internal_data2 <= (others => '0');
 		internal_opcode <= "101";
-		wait for 100 ps;
+		wait for 2 ps;
 		-- nor
 		internal_data1 <= (others => '1');
 		internal_data2 <= (others => '0');
 		internal_opcode <= "110";
-		wait for 100 ps;
+		wait for 2 ps;
 		-- xnor
 		internal_data1 <= (others => '1');
 		internal_data2 <= (others => '0');
 		internal_opcode <= "111";
-		wait for 100 ps;
+		wait for 2 ps;
 		-- not
 		internal_data1 <= (others => '1');
 		internal_data2 <= (others => '1');
 		internal_data2(0) <= '0';
 		internal_opcode <= "100";
-		wait for 100 ps;
+		wait for 2 ps;
 
 	end process;
 

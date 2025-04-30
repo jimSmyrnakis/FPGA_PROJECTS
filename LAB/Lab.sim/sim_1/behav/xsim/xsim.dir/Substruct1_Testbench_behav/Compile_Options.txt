@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "Substruct1_Testbench_behav" "xil_defaultlib.Substruct1_Testbench" -log "elaborate.log" 
