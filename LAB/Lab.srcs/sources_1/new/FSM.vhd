@@ -38,13 +38,13 @@ entity FSM is
         
         -- current state and state input variables
         fsm_istate: in std_logic_vector(1 downto 0);
-        fsm_iincr : in std_logic_vector(3 downto 0);
-        fsm_imul  : in std_logic_vector(1 downto 0);
+        fsm_iincr : in std_logic_vector(3 downto 0); -- counter πρως την 10-αδα (είσοδος )
+        fsm_imul  : in std_logic_vector(1 downto 0); -- counter πρως την 3-αδα (είσοδος)
         
         -- output state and state output variables
         fsm_ostate: out std_logic_vector(1 downto 0);
-        fsm_oincr : out std_logic_vector(3 downto 0);
-        fsm_omul  : out std_logic_vector(1 downto 0);
+        fsm_oincr : out std_logic_vector(3 downto 0);-- counter πρως την 10-αδα (εξοδος )
+        fsm_omul  : out std_logic_vector(1 downto 0);-- counter πρως την 3-αδα (εξοδος)
         
         fsm_output: out std_logic_vector(7 downto 0)
        );
@@ -55,9 +55,11 @@ end FSM;
 architecture Behavioral of FSM is
 
     component Subtruct1 is
+    generic (
+        n: integer := 4);
     port ( 
-        input : in std_logic_vector (4 downto 0);
-        output: out std_logic_vector(4 downto 0));
+        input : in std_logic_vector (n - 1 downto 0);
+        output: out std_logic_vector(n - 1 downto 0));
     end component;
     
     component Add1 is
@@ -79,39 +81,42 @@ architecture Behavioral of FSM is
     signal new_outMul2 : std_logic_vector(7 downto 0);
 begin
 
-    UTen   : Subtruct1 port map ( input => fsm_iincr , output => new_incr);
-    UThree : Subtruct1 port map ( input => fsm_imul , output => new_mul);
+    UTen   : Subtruct1 generic map (n => 4) port map ( input => fsm_iincr , output => new_incr);
+    UThree : Subtruct1 generic map (n => 2) port map ( input => fsm_imul , output => new_mul);
     UADD1  : add1      port map ( input => fsm_input , output => new_outPlus1);
     MulClip1 : Mul2AndClip port map ( input => fsm_input , output => new_outMul2);
     process( fsm_clk)
     begin 
         if (fsm_clk'event and fsm_clk = '1') then
             case fsm_istate is
-                when "00" => -- started point (nothing happens)
-                    fsm_output <= fsm_input ; -- output is the input (for moment)
+                when "00" => -- started point - default state(nothing happens)
+                
+                    fsm_output <= fsm_input ; -- output is the input 
                     case fsm_input is
                         when "00000000" => -- then go to state 01(increment state) and set variables
                             fsm_ostate <= "01";
-                            -- this goes to the increment state , so
-                            fsm_oincr <= "1001"; -- wich in tenth element is gone be zero
-                        when "11111111" => 
-                            fsm_ostate <= "10"; -- then multyply state
-                            fsm_omul <= "10"; -- becomes zero for the third element
-                        when others     => -- then set this state
+                            -- this goes to the increment state
+                            fsm_oincr <= "1001"; -- in the tenth dicrement is going to be zero
+                        when "11111111" => -- then go to state 10 (multiply state) and set variables
+                            fsm_ostate <= "10"; -- multyply state
+                            fsm_omul <= "10"; -- in the third dicrement is going to be zero
+                        when others     => -- otherwise keep this state 00 
                             fsm_ostate <= "00";
                     end case;
-                when "01" => -- a zero input has previusly found
                     
-                   case fsm_iincr is
-                        when "0000" => 
+                when "01" => -- state increment
+                    
+                   case fsm_iincr is -- check increment variable
+                        when "0000" => -- if zero go back to state 00
                             fsm_ostate <= "00";
-                        when others =>
+                        when others => -- otherwise is still dicrements the variable so tay in that state
                             fsm_ostate <= "01";
                     end case;
-                    
-                    fsm_output <= new_outPlus1;
-                when "10" => -- a 255 value has previusly found
-                    fsm_omul <= new_mul;
+                    fsm_oincr  <= new_incr;
+                    fsm_omul   <= "00";
+                    fsm_output <= new_outPlus1; -- add 1 to the input
+                when "10" => -- The multiply state 
+                    fsm_omul <= new_mul; -- take the new mul variable 
                     case fsm_imul is
                         when "00" => -- if is time for multiply by 2
                             case fsm_input is
@@ -120,7 +125,7 @@ begin
                                 when others => -- otherwise is 00
                                     fsm_ostate <= "00";
                             end case;
-                            fsm_output <= new_outMul2;
+                            fsm_output <= new_outMul2; -- always take the multyplication result
                         when others => -- if still decriments
                             fsm_output <= fsm_input; -- output is input
                             fsm_ostate <= "10"; -- this state remains

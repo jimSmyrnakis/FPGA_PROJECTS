@@ -37,9 +37,11 @@ end Substruct1_Testbench;
 
 architecture Behavioral of Substruct1_Testbench is
     component Subtruct1 is
+    generic (
+        n: integer := 4);
     port ( 
-            input : in std_logic_vector(3 downto 0);
-            output: out std_logic_vector(3 downto 0));
+            input : in std_logic_vector(n - 1 downto 0);
+            output: out std_logic_vector(n - 1 downto 0));
     end component;
     
     signal Substruct1_input : std_logic_vector(3 downto 0):= "1111";
@@ -52,6 +54,6 @@ begin
         Substruct1_input <= Substruct1_output;
     end process;
 
-    TEST: Subtruct1 port map ( input => Substruct1_input , output => Substruct1_output);
+    TEST: Subtruct1 generic map (n => 4) port map ( input => Substruct1_input , output => Substruct1_output);
 
 end Behavioral;

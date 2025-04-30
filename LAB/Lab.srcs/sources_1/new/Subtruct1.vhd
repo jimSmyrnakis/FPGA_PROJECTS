@@ -32,21 +32,23 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Subtruct1 is
+generic (
+     n : integer := 4 );
 port ( 
-        input : in std_logic_vector(3 downto 0);
-        output: out std_logic_vector(3 downto 0));
+        input : in std_logic_vector(n - 1 downto 0);
+        output: out std_logic_vector(n - 1 downto 0));
 end Subtruct1;
 
 architecture Behavioral of Subtruct1 is
-    signal Borrow : std_logic_vector(4 downto 0) := "00000";
-    signal Difference : std_logic_vector(3 downto 0);
-    signal OneNum     : std_logic_vector(3 downto 0) := "0001";
+    signal Borrow : std_logic_vector(n downto 0) := (others => '0');
+    signal Difference : std_logic_vector(n - 1 downto 0);
+    signal OneNum     : std_logic_vector(n - 1 downto 0) := (others => '0');
 begin
     
-    
+    OneNum(0) <= '1';
     --D = A XOR B XOR Bin
     --Bout = (¬A ∧ B) ∨ (B ∧ Bin) ∨ (¬A ∧ Bin)
-    gen_label: for i in 0 to 3 generate
+    gen_label: for i in 0 to n - 1 generate
     begin
         Borrow(i + 1) <=  (not input(i) and OneNum(i)) or (OneNum(i) and Borrow(i)) or (not input(i) and Borrow(i));
         Difference(i) <= input(i) xor OneNum(i) xor Borrow(i);

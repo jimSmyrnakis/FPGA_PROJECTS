@@ -38,7 +38,7 @@ entity Add1 is
 end Add1;
 
 architecture Behavioral of Add1 is
-    signal Carry : std_logic_vector(8 downto 0) := "000000001";
+    signal Carry   : std_logic_vector(8 downto 0) := "000000001";
     signal Summary : std_logic_vector(7 downto 0);
 begin
     
@@ -49,5 +49,13 @@ begin
         Summary(i) <= input(i) xor Carry(i);
     end generate;
     
-    output <= Summary;
+    process (Summary , Carry)
+    begin 
+        if (input = X"FF") then 
+            output <= X"FF";
+        else 
+            output <= Summary;
+        end if;
+    end process;
+    
 end Behavioral;
