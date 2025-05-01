@@ -109,7 +109,7 @@ begin
                    case fsm_iincr is -- check increment variable
                         when "0000" => -- if zero go back to state 00
                             fsm_ostate <= "00";
-                        when others => -- otherwise is still dicrements the variable so tay in that state
+                        when others => -- otherwise is still dicrements the variable  , stay in that state
                             fsm_ostate <= "01";
                     end case;
                     fsm_oincr  <= new_incr;
@@ -122,10 +122,11 @@ begin
                             case fsm_input is
                                 when "00000000" => -- if is zero next state is 01
                                     fsm_ostate <= "01";
+                                    fsm_oincr <= "1001"; -- ofcourse we must set the variable for the next state 
                                 when others => -- otherwise is 00
                                     fsm_ostate <= "00";
                             end case;
-                            fsm_output <= new_outMul2; -- always take the multyplication result
+                            fsm_output <= new_outMul2; -- take the multyplication result
                         when others => -- if still decriments
                             fsm_output <= fsm_input; -- output is input
                             fsm_ostate <= "10"; -- this state remains

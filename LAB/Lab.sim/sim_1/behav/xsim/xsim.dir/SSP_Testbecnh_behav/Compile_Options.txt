@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "SSP_Testbecnh_behav" "xil_defaultlib.SSP_Testbecnh" -log "elaborate.log" 

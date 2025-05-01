@@ -1,0 +1,7 @@
+Running: xsim.dir/FSMRegister_Testbench_behav/xsimk.exe -simmode gui -wdb FSMRegister_Testbench_behav.wdb -simrunnum 0 -socket 49212
+Design successfully loaded
+Design Loading Memory Usage: 29388 KB (Peak: 29388 KB)
+Design Loading CPU Usage: 1796 ms
+Simulation completed
+Simulation Memory Usage: 37880 KB (Peak: 37880 KB)
+Simulation CPU Usage: 1984 ms

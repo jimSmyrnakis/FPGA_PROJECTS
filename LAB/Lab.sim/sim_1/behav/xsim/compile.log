@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/User/Desktop/UNIWA/AdvancedVHDL/FPGA_PROJECTS/LAB/Lab.srcs/sources_1/new/Add1.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Add1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/User/Desktop/UNIWA/AdvancedVHDL/FPGA_PROJECTS/LAB/Lab.srcs/sources_1/new/SimplestStreamProcessor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'SimplestStreamProcessor'

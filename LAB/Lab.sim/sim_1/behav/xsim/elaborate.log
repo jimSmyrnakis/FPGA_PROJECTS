@@ -1,7 +1,7 @@
 Vivado Simulator v2024.2.0
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Add1_Testbench_behav xil_defaultlib.Add1_Testbench -log elaborate.log 
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot SSP_Testbecnh_behav xil_defaultlib.SSP_Testbecnh -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -11,6 +11,13 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.FSMRegister [fsmregister_default]
+Compiling architecture behavioral of entity xil_defaultlib.Subtruct1 [subtruct1_default]
+Compiling architecture behavioral of entity xil_defaultlib.Subtruct1 [\Subtruct1(n=2)\]
 Compiling architecture behavioral of entity xil_defaultlib.Add1 [add1_default]
-Compiling architecture behavioral of entity xil_defaultlib.add1_testbench
-Built simulation snapshot Add1_Testbench_behav
+Compiling architecture behavioral of entity xil_defaultlib.Mul2AndClip [mul2andclip_default]
+Compiling architecture behavioral of entity xil_defaultlib.FSM [fsm_default]
+Compiling architecture behavioral of entity xil_defaultlib.SimplestStreamProcessor [simpleststreamprocessor_default]
+Compiling architecture behavioral of entity xil_defaultlib.ssp_testbecnh
+Built simulation snapshot SSP_Testbecnh_behav

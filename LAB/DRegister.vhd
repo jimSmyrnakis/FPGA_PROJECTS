@@ -20,16 +20,17 @@ begin
 
 	process(clk)
 	begin
-		if (clk'event and clk='1') then
-			if (rst='1') then
-				internal_data <= (others => '0');
-			elsif (rw = '1') then
-				internal_data <= data_in;
-			end if;
+	   if (clk'event and clk='1') then -- when we are in positive edge
+	       data_out <= internal_data; -- take previus data as output
+	       if (rst='1') then -- if reset is set  
+	           internal_data <= (others => '0'); -- all data are zero
+	       elsif (rw = '1') then -- if rst is zero then if 
+	           internal_data <= data_in;
+	       end if;
 		end if;
 	end process;
 
-	data_out <= internal_data;
+	
 	
 
 end Behavional;
